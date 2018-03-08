@@ -112,7 +112,7 @@ public class ActionQueue {
         @Override
         public int compare(Action a1, Action a2) {
             int value = a2.mConfig.mPriority - a1.mConfig.mPriority; //优先级相同情况下 按入队时间排序
-            return value == 0 ? (int) (a2.mConfig.timestamp - a1.mConfig.timestamp) : value;
+            return value == 0 ? (int) (a1.mConfig.timestamp - a2.mConfig.timestamp) : value;
         }
     };
 }
